@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ника кузнецова — вайб-кодинг</title>
+<meta name="theme-color" content="#fcf9f4">
+<style>
+  :root{
+    --bg:#fcf9f4; --card:rgba(255,255,255,.85); --card-2:rgba(245,243,239,.9);
+    --ink:#2B211C; --ink-soft:#8D8880; --line:#E7E2D8;
+    --amber:#C9506E; --amber-text:#A83A57; --tag-bg-amber:#F5DCE3;
+    --on-ink:#fff;
+    --grad-goal: linear-gradient(135deg, #FF7CA8 0%, #FF3D77 100%);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#17151a; --card:rgba(38,31,27,.8); --card-2:rgba(49,41,35,.92);
+      --ink:#F3EDE6; --ink-soft:#AEA192; --line:rgba(255,150,110,.18);
+      --amber:#E8829E; --amber-text:#F0A8BC; --tag-bg-amber:rgba(232,130,158,.18);
+      --on-ink:#17110E;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#17151a; --card:rgba(38,31,27,.8); --card-2:rgba(49,41,35,.92);
+    --ink:#F3EDE6; --ink-soft:#AEA192; --line:rgba(255,150,110,.18);
+    --amber:#E8829E; --amber-text:#F0A8BC; --tag-bg-amber:rgba(232,130,158,.18);
+    --on-ink:#17110E;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:720px;margin:0 auto;padding:20px 18px 60px;}
+
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:6px 0 22px;}
+  .brand{font-size:15px;font-weight:700;letter-spacing:0;}
+  .theme-switch{
+    position:relative;width:44px;height:24px;border-radius:20px;background:var(--card-2);
+    border:1px solid var(--line);cursor:pointer;flex-shrink:0;
+  }
+  .theme-switch-knob{
+    position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;
+    background:var(--amber);transition:transform .2s ease;
+  }
+  .theme-switch.on .theme-switch-knob{transform:translateX(20px);}
+
+  .hero{padding:18px 0 8px;}
+  .hero h1{font-size:28px;line-height:1.25;font-weight:700;margin:0 0 14px;letter-spacing:0;}
+  .hero p{font-size:14px;line-height:1.6;color:var(--ink-soft);margin:0 0 20px;max-width:480px;}
+  .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
+  .hero-tag{
+    font-size:12px;font-weight:600;background:var(--tag-bg-amber);color:var(--amber-text);
+    border-radius:20px;padding:6px 12px;
+  }
+  .btn-primary{
+    display:inline-block;border:none;border-radius:12px;padding:13px 20px;
+    font-family:inherit;font-weight:600;font-size:14px;cursor:pointer;text-decoration:none;
+    background:var(--grad-goal);color:#fff;box-shadow:0 10px 24px rgba(216,40,89,.22);
+  }
+  .btn-primary:active{opacity:.88;}
+
+  .section-title{font-size:20px;font-weight:700;margin:36px 0 4px;padding-top:22px;border-top:1px solid var(--line);}
+  .section-sub{font-size:12.5px;color:var(--ink-soft);margin-bottom:18px;}
+
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:20px;
+    padding:18px;margin-bottom:14px;box-shadow:0 4px 16px rgba(30,20,15,.05);
+  }
+  .card-name{font-size:16px;font-weight:700;margin-bottom:6px;}
+  .card-desc{font-size:13.5px;line-height:1.55;color:var(--ink-soft);margin-bottom:14px;}
+  .card-row{display:flex;gap:8px;flex-wrap:wrap;}
+  .card-link{
+    font-size:13px;font-weight:600;border-radius:12px;padding:9px 14px;text-decoration:none;
+    border:1px solid var(--line);color:var(--ink);background:var(--card-2);
+  }
+  .card-link.order{background:var(--tag-bg-amber);color:var(--amber-text);border:none;}
+
+  .services{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px;}
+  .service-chip{
+    font-size:12.5px;font-weight:600;background:var(--card-2);border:1px solid var(--line);
+    border-radius:20px;padding:7px 13px;
+  }
+
+  .cta-block{
+    text-align:center;background:var(--grad-goal);border-radius:20px;padding:28px 22px;
+    color:#fff;margin-top:8px;box-shadow:0 14px 34px rgba(216,40,89,.2);
+  }
+  .cta-block h2{font-size:18px;margin:0 0 8px;font-weight:700;}
+  .cta-block p{font-size:13px;opacity:.92;margin:0 0 18px;line-height:1.5;}
+  .cta-block .btn-primary{background:#fff;color:var(--amber-text);box-shadow:none;}
+
+  footer{text-align:center;font-size:12px;color:var(--ink-soft);margin-top:40px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand">ника кузнецова</div>
+    <div class="theme-switch" id="themeSwitch" onclick="toggleTheme()"><div class="theme-switch-knob"></div></div>
+  </div>
+
+  <div class="hero">
+    <h1>делаю сайты, платформы и telegram-агентов на вайб-кодинге — от идеи до готового продукта</h1>
+    <p>описываю задачу — получаю рабочий инструмент: без долгой разработки и без лишних затрат. ниже — то, что уже сделано и работает.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">сайты и лендинги</span>
+      <span class="hero-tag">личные платформы</span>
+      <span class="hero-tag">telegram-агенты</span>
+      <span class="hero-tag">трекеры и дневники</span>
+    </div>
+    <a class="btn-primary" href="#work">смотреть работы</a>
+  </div>
+
+  <div id="work" class="section-title">работы</div>
+  <div class="section-sub">каждая — рабочий продукт, не макет</div>
+
+  <div class="card">
+    <div class="card-name">связаны</div>
+    <div class="card-desc">студия персональных журналов и книг-подарков о человеке или паре — собираются из настоящих слов близких и вёрстаются как глянцевый журнал. сайт-визитка с лид-магнитом и мини-конструктором разворота.</div>
+    <div class="card-row">
+      <a class="card-link" href="https://svyazany.ru" target="_blank" rel="noopener">смотреть сайт</a>
+      <a class="card-link order" href="#contact">заказать такое же</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-name">поток · 70 дней</div>
+    <div class="card-desc">личная платформа планирования: каскад цель → спринт → неделя → день, стрики выполнения, ачивки, тепловая карта задач. своя, ежедневная.</div>
+    <div class="card-row">
+      <a class="card-link" href="https://nikakuznecova24-svg.github.io/potok/" target="_blank" rel="noopener">смотреть сайт</a>
+      <a class="card-link order" href="#contact">заказать такое же</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-name">финансовый дневник богатой женщины</div>
+    <div class="card-desc">трекер личных финансов: план на месяц (минимум/оптимум/максимум), кредиты и платежи с датами, день финансовой свободы при текущем темпе выплат.</div>
+    <div class="card-row">
+      <a class="card-link" href="https://nikakuznecova24-svg.github.io/nika-finance/" target="_blank" rel="noopener">смотреть сайт</a>
+      <a class="card-link order" href="#contact">заказать такое же</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-name">hr-tracker</div>
+    <div class="card-desc">рекрутинг-трекер для рекрутера: кандидаты, собеседования, вакансии и увольнения в одном месте, без таблиц в экселе.</div>
+    <div class="card-row">
+      <a class="card-link" href="https://nikakuznecova24-svg.github.io/hr-tracker/" target="_blank" rel="noopener">смотреть сайт</a>
+      <a class="card-link order" href="#contact">заказать такое же</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-name">алина гвасалия · pro тело</div>
+    <div class="card-desc">визитка и лендинг для эксперта — представление и понятный путь к записи.</div>
+    <div class="card-row">
+      <a class="card-link" href="https://nikakuznecova24-svg.github.io/gvasaliya/" target="_blank" rel="noopener">смотреть сайт</a>
+      <a class="card-link order" href="#contact">заказать такое же</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-name">логбук никиты</div>
+    <div class="card-desc">личный логбук — фиксировать и отслеживать своё день за днём в одном месте.</div>
+    <div class="card-row">
+      <a class="card-link" href="https://nikakuznecova24-svg.github.io/nikita-logbook/" target="_blank" rel="noopener">смотреть сайт</a>
+      <a class="card-link order" href="#contact">заказать такое же</a>
+    </div>
+  </div>
+
+  <div class="section-title">что можно заказать</div>
+  <div class="section-sub" style="margin-bottom:18px;">
+    <div class="services">
+      <span class="service-chip">сайт-визитка</span>
+      <span class="service-chip">лендинг</span>
+      <span class="service-chip">личная платформа</span>
+      <span class="service-chip">трекер / дневник</span>
+      <span class="service-chip">telegram-бот и агент</span>
+    </div>
+  </div>
+
+  <div id="contact" class="cta-block">
+    <h2>хочешь такой же инструмент себе?</h2>
+    <p>расскажи, что нужно — обсудим и соберу похожее под твою задачу.</p>
+    <a class="btn-primary" href="https://instagram.com/nikakuznecova24" target="_blank" rel="noopener">написать в instagram</a>
+  </div>
+
+  <footer>ника кузнецова · вайб-кодинг</footer>
+</div>
+
+<script>
+function applyTheme(t){
+  document.documentElement.setAttribute('data-theme', t);
+  document.getElementById('themeSwitch').classList.toggle('on', t==='dark');
+  try{ localStorage.setItem('theme', t); }catch(e){}
+}
+function toggleTheme(){
+  const cur = document.documentElement.getAttribute('data-theme') ||
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  applyTheme(cur==='dark' ? 'light' : 'dark');
+}
+(function(){
+  let saved=null;
+  try{ saved = localStorage.getItem('theme'); }catch(e){}
+  if(saved){ applyTheme(saved); }
+  else if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+    document.getElementById('themeSwitch').classList.add('on');
+  }
+})();
+</script>
+</body>
+</html>
