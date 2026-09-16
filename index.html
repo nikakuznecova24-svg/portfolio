@@ -93,11 +93,18 @@
                         <iframe src="https://svyazany.ru" title="связаны — живое превью" loading="lazy" style="width: 400%; height: 400%; transform: scale(0.25); transform-origin: 0 0; border: 0; position: absolute; top: 0; left: 0; pointer-events: none;"></iframe>
                         <span class="text-serene-800 rounded-full text-xs font-semibold shadow-sm" style="position:absolute; bottom:0.5rem; right:0.5rem; padding:0.25rem 0.75rem; background:rgba(255,255,255,0.9);">открыть сайт →</span>
                     </a>
-                    <div class="flex items-center justify-end mb-4">
-                        <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">лид-магнит внутри</span>
-                    </div>
                     <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">сайт «связаны»</h3>
-                    <p class="text-serene-800 text-sm md:text-base mb-6">когда продаёшь неочевидный, эмоциональный подарок — текста на странице мало, нужно, чтобы человек прямо на сайте почувствовал, как это будет выглядеть. <strong class="text-accent-terracotta font-bold">лид-магнит и мини-конструктор разворота дают попробовать продукт до оплаты</strong> и снимают главное сомнение «а как это будет смотреться?».</p>
+                    <p class="text-serene-800 text-sm md:text-base mb-3">когда продаёшь неочевидный, эмоциональный подарок — текста на странице мало, нужно, чтобы человек прямо на сайте почувствовал, как это будет выглядеть. <strong class="text-accent-terracotta font-bold">лид-магнит и мини-конструктор разворота дают попробовать продукт до оплаты</strong> и снимают главное сомнение «а как это будет смотреться?».</p>
+                    <button type="button" onclick="togglePortfolioCard(this)" class="service-toggle inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm mb-1">
+                        <span class="toggle-label">подробнее</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform toggle-chevron"></i>
+                    </button>
+                    <div class="service-details hidden text-serene-800 space-y-2 mt-4 mb-2 text-sm md:text-base pt-4 border-t border-serene-200/50">
+                        <p><strong class="font-semibold text-serene-900">для кого:</strong> студии и бренды с эмоциональным, персональным продуктом — подарки, услуги на заказ</p>
+                        <p><strong class="font-semibold text-serene-900">что входит:</strong> сайт-визитка, лид-магнит, мини-конструктор разворота</p>
+                        <p><strong class="font-semibold text-serene-900">срок:</strong> 5-10 дней</p>
+                        <p><strong class="font-semibold text-serene-900">ориентир цены:</strong> от 15 000 ₽</p>
+                    </div>
                 </div>
 
                 <div class="portfolio-item spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300" data-category="сайты">
@@ -105,54 +112,96 @@
                         <iframe src="https://nikakuznecova24-svg.github.io/gvasaliya/" title="сайт психолога — живое превью" loading="lazy" style="width: 400%; height: 400%; transform: scale(0.25); transform-origin: 0 0; border: 0; position: absolute; top: 0; left: 0; pointer-events: none;"></iframe>
                         <span class="text-serene-800 rounded-full text-xs font-semibold shadow-sm" style="position:absolute; bottom:0.5rem; right:0.5rem; padding:0.25rem 0.75rem; background:rgba(255,255,255,0.9);">открыть сайт →</span>
                     </a>
-                    <div class="flex items-center justify-end mb-4">
-                        <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">запись в один клик</span>
-                    </div>
                     <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">сайт психолога</h3>
-                    <p class="text-serene-800 text-sm md:text-base mb-6">когда устал(а) объяснять на созвонах, чем занимаешься — нужен <strong class="text-accent-terracotta font-bold">сайт, который сразу показывает уровень эксперта и ведёт к записи одним понятным действием</strong>, без лишних вопросов и кликов.</p>
+                    <p class="text-serene-800 text-sm md:text-base mb-3">когда устал(а) объяснять на созвонах, чем занимаешься — нужен <strong class="text-accent-terracotta font-bold">сайт, который сразу показывает уровень эксперта и ведёт к записи одним понятным действием</strong>, без лишних вопросов и кликов.</p>
+                    <button type="button" onclick="togglePortfolioCard(this)" class="service-toggle inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm mb-1">
+                        <span class="toggle-label">подробнее</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform toggle-chevron"></i>
+                    </button>
+                    <div class="service-details hidden text-serene-800 space-y-2 mt-4 mb-2 text-sm md:text-base pt-4 border-t border-serene-200/50">
+                        <p><strong class="font-semibold text-serene-900">для кого:</strong> эксперты и специалисты, которые продают консультации или услуги</p>
+                        <p><strong class="font-semibold text-serene-900">что входит:</strong> визитка-лендинг, блок «обо мне», подход, форматы работы, отзывы, запись в один клик</p>
+                        <p><strong class="font-semibold text-serene-900">срок:</strong> 5-10 дней</p>
+                        <p><strong class="font-semibold text-serene-900">ориентир цены:</strong> от 15 000 ₽</p>
+                    </div>
                 </div>
 
                 <div class="portfolio-item spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300" data-category="воронка">
-                    <div class="flex items-center justify-end mb-4">
-                        <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">работает 24/7</span>
-                    </div>
                     <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">бот-воронка «связаны»</h3>
-                    <p class="text-serene-800 text-sm md:text-base mb-6">когда не успеваешь вручную прогревать каждого нового подписчика — нужна <strong class="text-accent-terracotta font-bold">система, которая сама, шаг за шагом, доводит человека до готовности заказать</strong>, без твоего участия в переписке, 24/7.</p>
+                    <p class="text-serene-800 text-sm md:text-base mb-3">когда не успеваешь вручную прогревать каждого нового подписчика — нужна <strong class="text-accent-terracotta font-bold">система, которая сама, шаг за шагом, доводит человека до готовности заказать</strong>, без твоего участия в переписке, 24/7.</p>
+                    <button type="button" onclick="togglePortfolioCard(this)" class="service-toggle inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm mb-1">
+                        <span class="toggle-label">подробнее</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform toggle-chevron"></i>
+                    </button>
+                    <div class="service-details hidden text-serene-800 space-y-2 mt-4 mb-2 text-sm md:text-base pt-4 border-t border-serene-200/50">
+                        <p><strong class="font-semibold text-serene-900">для кого:</strong> те, кто продаёт через telegram-канал или рассылку</p>
+                        <p><strong class="font-semibold text-serene-900">что входит:</strong> серия сообщений, которая сама прогревает и ведёт к заказу</p>
+                        <p><strong class="font-semibold text-serene-900">срок:</strong> 5-10 дней</p>
+                        <p><strong class="font-semibold text-serene-900">ориентир цены:</strong> от 25 000 ₽</p>
+                    </div>
                     <a href="https://t.me/svyazanyy_bot" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">открыть бота</a>
                 </div>
 
                 <div class="portfolio-item spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300" data-category="сервисы">
-                    <div class="flex items-center justify-end mb-4">
-                        <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">считает автоматически</span>
-                    </div>
                     <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">финансовый дневник богатой женщины</h3>
-                    <p class="text-serene-800 text-sm md:text-base mb-6">когда деньги утекают незаметно и непонятно, когда закроются кредиты — нужен не эксель, а <strong class="text-accent-terracotta font-bold">простой трекер, который сам считает план на месяц и день финансовой свободы</strong> при текущем темпе выплат.</p>
+                    <p class="text-serene-800 text-sm md:text-base mb-3">когда деньги утекают незаметно и непонятно, когда закроются кредиты — нужен не эксель, а <strong class="text-accent-terracotta font-bold">простой трекер, который сам считает план на месяц и день финансовой свободы</strong> при текущем темпе выплат.</p>
+                    <button type="button" onclick="togglePortfolioCard(this)" class="service-toggle inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm mb-1">
+                        <span class="toggle-label">подробнее</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform toggle-chevron"></i>
+                    </button>
+                    <div class="service-details hidden text-serene-800 space-y-2 mt-4 mb-2 text-sm md:text-base pt-4 border-t border-serene-200/50">
+                        <p><strong class="font-semibold text-serene-900">для кого:</strong> те, кто хочет держать личные финансы под контролем без экселя</p>
+                        <p><strong class="font-semibold text-serene-900">что входит:</strong> план на месяц (минимум/оптимум/максимум), кредиты и платежи с датами, день финансовой свободы</p>
+                        <p><strong class="font-semibold text-serene-900">срок:</strong> 5-10 дней</p>
+                        <p><strong class="font-semibold text-serene-900">ориентир цены:</strong> от 10 000 ₽</p>
+                    </div>
                     <a href="https://nikakuznecova24-svg.github.io/nika-finance/" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">смотреть сайт</a>
                 </div>
 
                 <div class="portfolio-item spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300" data-category="сервисы">
-                    <div class="flex items-center justify-end mb-4">
-                        <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">личный трекер</span>
-                    </div>
                     <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">сервис никиты</h3>
-                    <p class="text-serene-800 text-sm md:text-base mb-6">когда хочешь отслеживать свои дни и решения, но обычные заметки теряются и не складываются в картину — нужен <strong class="text-accent-terracotta font-bold">личный логбук, который фиксирует происходящее в одном месте</strong> и не даёт забыть, что было важно.</p>
+                    <p class="text-serene-800 text-sm md:text-base mb-3">когда хочешь отслеживать свои дни и решения, но обычные заметки теряются и не складываются в картину — нужен <strong class="text-accent-terracotta font-bold">личный логбук, который фиксирует происходящее в одном месте</strong> и не даёт забыть, что было важно.</p>
+                    <button type="button" onclick="togglePortfolioCard(this)" class="service-toggle inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm mb-1">
+                        <span class="toggle-label">подробнее</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform toggle-chevron"></i>
+                    </button>
+                    <div class="service-details hidden text-serene-800 space-y-2 mt-4 mb-2 text-sm md:text-base pt-4 border-t border-serene-200/50">
+                        <p><strong class="font-semibold text-serene-900">для кого:</strong> те, кто хочет фиксировать свои дни и решения в одном месте</p>
+                        <p><strong class="font-semibold text-serene-900">что входит:</strong> личный логбук с записями по дням</p>
+                        <p><strong class="font-semibold text-serene-900">срок:</strong> 5-10 дней</p>
+                        <p><strong class="font-semibold text-serene-900">ориентир цены:</strong> от 10 000 ₽</p>
+                    </div>
                     <a href="https://nikakuznecova24-svg.github.io/nikita-logbook/" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">смотреть сайт</a>
                 </div>
 
                 <div class="portfolio-item spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300" data-category="агенты">
-                    <div class="flex items-center justify-end mb-4">
-                        <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">живой пример</span>
-                    </div>
                     <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">личный ии-агент</h3>
-                    <p class="text-serene-800 text-sm md:text-base mb-6">когда задачи, напоминания и разговоры разбросаны по головам и чатам — нужен <strong class="text-accent-terracotta font-bold">агент, который держит всё в одном месте и отвечает в любой момент, 24/7</strong>, без выходных. живой пример работы такого агента, а не просто описание услуги.</p>
+                    <p class="text-serene-800 text-sm md:text-base mb-3">когда задачи, напоминания и разговоры разбросаны по головам и чатам — нужен <strong class="text-accent-terracotta font-bold">агент, который держит всё в одном месте и отвечает в любой момент, 24/7</strong>, без выходных. живой пример работы такого агента, а не просто описание услуги.</p>
+                    <button type="button" onclick="togglePortfolioCard(this)" class="service-toggle inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm mb-1">
+                        <span class="toggle-label">подробнее</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform toggle-chevron"></i>
+                    </button>
+                    <div class="service-details hidden text-serene-800 space-y-2 mt-4 mb-2 text-sm md:text-base pt-4 border-t border-serene-200/50">
+                        <p><strong class="font-semibold text-serene-900">для кого:</strong> те, у кого много задач или вопросов и нет времени отвечать на каждый лично</p>
+                        <p><strong class="font-semibold text-serene-900">что входит:</strong> агент в telegram с памятью диалога, держит задачи и напоминания, отвечает 24/7</p>
+                        <p><strong class="font-semibold text-serene-900">срок:</strong> 5-10 дней</p>
+                        <p><strong class="font-semibold text-serene-900">ориентир цены:</strong> от 20 000 ₽</p>
+                    </div>
                 </div>
 
                 <div class="portfolio-item spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300" data-category="платформы">
-                    <div class="flex items-center justify-end mb-4">
-                        <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">стрики и прогресс</span>
-                    </div>
                     <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">платформа «поток · 70 дней»</h3>
-                    <p class="text-serene-800 text-sm md:text-base mb-6">когда крупная цель пугает масштабом и легко забросить — нужна <strong class="text-accent-terracotta font-bold">система, которая раскладывает её на спринты, недели и дни, показывает стрики и прогресс</strong>, чтобы двигаться, а не буксовать.</p>
+                    <p class="text-serene-800 text-sm md:text-base mb-3">когда крупная цель пугает масштабом и легко забросить — нужна <strong class="text-accent-terracotta font-bold">система, которая раскладывает её на спринты, недели и дни, показывает стрики и прогресс</strong>, чтобы двигаться, а не буксовать.</p>
+                    <button type="button" onclick="togglePortfolioCard(this)" class="service-toggle inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm mb-1">
+                        <span class="toggle-label">подробнее</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform toggle-chevron"></i>
+                    </button>
+                    <div class="service-details hidden text-serene-800 space-y-2 mt-4 mb-2 text-sm md:text-base pt-4 border-t border-serene-200/50">
+                        <p><strong class="font-semibold text-serene-900">для кого:</strong> те, кто ведёт крупную личную цель и рискует её забросить</p>
+                        <p><strong class="font-semibold text-serene-900">что входит:</strong> каскад цель → спринт → неделя → день, стрики выполнения, ачивки, тепловая карта задач</p>
+                        <p><strong class="font-semibold text-serene-900">срок:</strong> 5-10 дней</p>
+                        <p><strong class="font-semibold text-serene-900">ориентир цены:</strong> от 25 000 ₽</p>
+                    </div>
                     <a href="https://nikakuznecova24-svg.github.io/potok/" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">смотреть сайт</a>
                 </div>
 
@@ -368,6 +417,17 @@
             try { lucide.createIcons(); } catch(e) { console.error('lucide init failed', e); }
             try { initTelegramLinks(); } catch(e) { console.error('telegram links init failed', e); }
         });
+
+        function togglePortfolioCard(btn) {
+            const wrap = btn.parentElement;
+            const details = wrap.querySelector('.service-details');
+            const label = btn.querySelector('.toggle-label');
+            const chevron = btn.querySelector('.toggle-chevron');
+            const opening = details.classList.contains('hidden');
+            details.classList.toggle('hidden');
+            label.textContent = opening ? 'свернуть' : 'подробнее';
+            chevron.classList.toggle('rotate-180');
+        }
 
         function filterPortfolio(btn) {
             const filter = btn.dataset.filter;
