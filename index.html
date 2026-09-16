@@ -1,217 +1,125 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ника кузнецова — вайб-кодинг</title>
-<meta name="theme-color" content="#fcf9f4">
-<style>
-  :root{
-    --bg:#fcf9f4; --card:rgba(255,255,255,.85); --card-2:rgba(245,243,239,.9);
-    --ink:#2B211C; --ink-soft:#8D8880; --line:#E7E2D8;
-    --amber:#C9506E; --amber-text:#A83A57; --tag-bg-amber:#F5DCE3;
-    --on-ink:#fff;
-    --grad-goal: linear-gradient(135deg, #FF7CA8 0%, #FF3D77 100%);
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#17151a; --card:rgba(38,31,27,.8); --card-2:rgba(49,41,35,.92);
-      --ink:#F3EDE6; --ink-soft:#AEA192; --line:rgba(255,150,110,.18);
-      --amber:#E8829E; --amber-text:#F0A8BC; --tag-bg-amber:rgba(232,130,158,.18);
-      --on-ink:#17110E;
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg:#17151a; --card:rgba(38,31,27,.8); --card-2:rgba(49,41,35,.92);
-    --ink:#F3EDE6; --ink-soft:#AEA192; --line:rgba(255,150,110,.18);
-    --amber:#E8829E; --amber-text:#F0A8BC; --tag-bg-amber:rgba(232,130,158,.18);
-    --on-ink:#17110E;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;background:var(--bg);color:var(--ink);
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{color:inherit;}
-  .wrap{max-width:720px;margin:0 auto;padding:20px 18px 60px;}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>портфолио — ника кузнецова | вайбкодинг</title>
+    <meta name="description" content="сайты, платформы и telegram-агенты на вайб-кодинге — то, что уже сделано и работает.">
 
-  .topbar{display:flex;align-items:center;justify-content:space-between;padding:6px 0 22px;}
-  .brand{font-size:15px;font-weight:700;letter-spacing:0;}
-  .theme-switch{
-    position:relative;width:44px;height:24px;border-radius:20px;background:var(--card-2);
-    border:1px solid var(--line);cursor:pointer;flex-shrink:0;
-  }
-  .theme-switch-knob{
-    position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;
-    background:var(--amber);transition:transform .2s ease;
-  }
-  .theme-switch.on .theme-switch-knob{transform:translateX(20px);}
+    <link rel="stylesheet" href="https://nikakuznecova24-svg.github.io/vaybkoding/assets/styles.css?v=12">
 
-  .hero{padding:18px 0 8px;}
-  .hero h1{font-size:28px;line-height:1.25;font-weight:700;margin:0 0 14px;letter-spacing:0;}
-  .hero p{font-size:14px;line-height:1.6;color:var(--ink-soft);margin:0 0 20px;max-width:480px;}
-  .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
-  .hero-tag{
-    font-size:12px;font-weight:600;background:var(--tag-bg-amber);color:var(--amber-text);
-    border-radius:20px;padding:6px 12px;
-  }
-  .btn-primary{
-    display:inline-block;border:none;border-radius:12px;padding:13px 20px;
-    font-family:inherit;font-weight:600;font-size:14px;cursor:pointer;text-decoration:none;
-    background:var(--grad-goal);color:#fff;box-shadow:0 10px 24px rgba(216,40,89,.22);
-  }
-  .btn-primary:active{opacity:.88;}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-  .section-title{font-size:20px;font-weight:700;margin:36px 0 4px;padding-top:22px;border-top:1px solid var(--line);}
-  .section-sub{font-size:12.5px;color:var(--ink-soft);margin-bottom:18px;}
-
-  .card{
-    background:var(--card);border:1px solid var(--line);border-radius:20px;
-    padding:18px;margin-bottom:14px;box-shadow:0 4px 16px rgba(30,20,15,.05);
-  }
-  .card-name{font-size:16px;font-weight:700;margin-bottom:6px;}
-  .card-desc{font-size:13.5px;line-height:1.55;color:var(--ink-soft);margin-bottom:14px;}
-  .card-row{display:flex;gap:8px;flex-wrap:wrap;}
-  .card-link{
-    font-size:13px;font-weight:600;border-radius:12px;padding:9px 14px;text-decoration:none;
-    border:1px solid var(--line);color:var(--ink);background:var(--card-2);
-  }
-  .card-link.order{background:var(--tag-bg-amber);color:var(--amber-text);border:none;}
-
-  .services{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px;}
-  .service-chip{
-    font-size:12.5px;font-weight:600;background:var(--card-2);border:1px solid var(--line);
-    border-radius:20px;padding:7px 13px;
-  }
-
-  .cta-block{
-    text-align:center;background:var(--grad-goal);border-radius:20px;padding:28px 22px;
-    color:#fff;margin-top:8px;box-shadow:0 14px 34px rgba(216,40,89,.2);
-  }
-  .cta-block h2{font-size:18px;margin:0 0 8px;font-weight:700;}
-  .cta-block p{font-size:13px;opacity:.92;margin:0 0 18px;line-height:1.5;}
-  .cta-block .btn-primary{background:#fff;color:var(--amber-text);box-shadow:none;}
-
-  footer{text-align:center;font-size:12px;color:var(--ink-soft);margin-top:40px;}
-</style>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF8F5;
+            background-image:
+                radial-gradient(1400px 800px at 10% 0%, rgba(224,122,95,0.18), transparent 70%),
+                radial-gradient(1400px 800px at 90% 25%, rgba(168,181,160,0.16), transparent 70%),
+                radial-gradient(1400px 900px at 10% 100%, rgba(212,162,74,0.18), transparent 70%);
+            color: #22211F;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .flex-wrap { flex-wrap: wrap; }
+        .mt-8 { margin-top: 2rem; }
+        .mt-auto { margin-top: auto; }
+    </style>
 </head>
-<body>
-<div class="wrap">
+<body class="antialiased selection:bg-accent-sunset/20 selection:text-serene-900">
 
-  <div class="topbar">
-    <div class="brand">ника кузнецова</div>
-    <div class="theme-switch" id="themeSwitch" onclick="toggleTheme()"><div class="theme-switch-knob"></div></div>
-  </div>
+    <section class="py-16 px-4">
+        <div class="max-w-3xl mx-auto">
 
-  <div class="hero">
-    <h1>делаю сайты, платформы и telegram-агентов на вайб-кодинге — от идеи до готового продукта</h1>
-    <p>описываю задачу — получаю рабочий инструмент: без долгой разработки и без лишних затрат. ниже — то, что уже сделано и работает.</p>
-    <div class="hero-tags">
-      <span class="hero-tag">сайты и лендинги</span>
-      <span class="hero-tag">личные платформы</span>
-      <span class="hero-tag">telegram-агенты</span>
-      <span class="hero-tag">трекеры и дневники</span>
-    </div>
-    <a class="btn-primary" href="#work">смотреть работы</a>
-  </div>
+            <a href="https://nikakuznecova24-svg.github.io/vaybkoding/" class="text-xs text-serene-800/60 hover:text-accent-terracotta underline">← на главную</a>
 
-  <div id="work" class="section-title">работы</div>
-  <div class="section-sub">каждая — рабочий продукт, не макет</div>
+            <div class="mt-8 mb-12">
+                <span class="text-xs font-semibold text-accent-terracotta block mb-3">портфолио</span>
+                <h1 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-serene-900 leading-snug mb-4">
+                    делаю сайты, платформы и telegram-агентов на вайб-кодинге — от идеи до готового продукта
+                </h1>
+                <p class="text-serene-800 leading-relaxed font-light text-sm md:text-base max-w-2xl mb-6">
+                    описываю задачу — получаю рабочий инструмент: без долгой разработки и без лишних затрат. ниже — то, что уже сделано и работает.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">сайты и лендинги</span>
+                    <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">личные платформы</span>
+                    <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">telegram-агенты</span>
+                    <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">трекеры и дневники</span>
+                </div>
+                <a href="#work" class="inline-flex px-4 py-2.5 sm:px-8 sm:py-4 w-auto text-xs sm:text-base bg-gradient-to-r from-accent-terracotta to-accent-sunset text-white font-medium rounded-full shadow-lg shadow-accent-terracotta/20 hover:shadow-xl hover:shadow-accent-terracotta/30 hover:scale-[1.02] active:scale-95 transition-all duration-300 text-center items-center justify-center gap-3">
+                    смотреть работы
+                </a>
+            </div>
 
-  <div class="card">
-    <div class="card-name">связаны</div>
-    <div class="card-desc">студия персональных журналов и книг-подарков о человеке или паре — собираются из настоящих слов близких и вёрстаются как глянцевый журнал. сайт-визитка с лид-магнитом и мини-конструктором разворота.</div>
-    <div class="card-row">
-      <a class="card-link" href="https://svyazany.ru" target="_blank" rel="noopener">смотреть сайт</a>
-      <a class="card-link order" href="#contact">заказать такое же</a>
-    </div>
-  </div>
+            <div id="work" class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
 
-  <div class="card">
-    <div class="card-name">поток · 70 дней</div>
-    <div class="card-desc">личная платформа планирования: каскад цель → спринт → неделя → день, стрики выполнения, ачивки, тепловая карта задач. своя, ежедневная.</div>
-    <div class="card-row">
-      <a class="card-link" href="https://nikakuznecova24-svg.github.io/potok/" target="_blank" rel="noopener">смотреть сайт</a>
-      <a class="card-link order" href="#contact">заказать такое же</a>
-    </div>
-  </div>
+                <div class="spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300">
+                    <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">связаны</h3>
+                    <p class="text-serene-800 text-sm md:text-base mb-6">студия персональных журналов и книг-подарков о человеке или паре — собираются из настоящих слов близких и вёрстаются как глянцевый журнал. сайт-визитка с лид-магнитом и мини-конструктором разворота.</p>
+                    <a href="https://svyazany.ru" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">смотреть сайт</a>
+                </div>
 
-  <div class="card">
-    <div class="card-name">финансовый дневник богатой женщины</div>
-    <div class="card-desc">трекер личных финансов: план на месяц (минимум/оптимум/максимум), кредиты и платежи с датами, день финансовой свободы при текущем темпе выплат.</div>
-    <div class="card-row">
-      <a class="card-link" href="https://nikakuznecova24-svg.github.io/nika-finance/" target="_blank" rel="noopener">смотреть сайт</a>
-      <a class="card-link order" href="#contact">заказать такое же</a>
-    </div>
-  </div>
+                <div class="spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300">
+                    <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">поток · 70 дней</h3>
+                    <p class="text-serene-800 text-sm md:text-base mb-6">личная платформа планирования: каскад цель → спринт → неделя → день, стрики выполнения, ачивки, тепловая карта задач.</p>
+                    <a href="https://nikakuznecova24-svg.github.io/potok/" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">смотреть сайт</a>
+                </div>
 
-  <div class="card">
-    <div class="card-name">hr-tracker</div>
-    <div class="card-desc">рекрутинг-трекер для рекрутера: кандидаты, собеседования, вакансии и увольнения в одном месте, без таблиц в экселе.</div>
-    <div class="card-row">
-      <a class="card-link" href="https://nikakuznecova24-svg.github.io/hr-tracker/" target="_blank" rel="noopener">смотреть сайт</a>
-      <a class="card-link order" href="#contact">заказать такое же</a>
-    </div>
-  </div>
+                <div class="spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300">
+                    <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">финансовый дневник богатой женщины</h3>
+                    <p class="text-serene-800 text-sm md:text-base mb-6">трекер личных финансов: план на месяц (минимум/оптимум/максимум), кредиты и платежи с датами, день финансовой свободы при текущем темпе выплат.</p>
+                    <a href="https://nikakuznecova24-svg.github.io/nika-finance/" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">смотреть сайт</a>
+                </div>
 
-  <div class="card">
-    <div class="card-name">алина гвасалия · pro тело</div>
-    <div class="card-desc">визитка и лендинг для эксперта — представление и понятный путь к записи.</div>
-    <div class="card-row">
-      <a class="card-link" href="https://nikakuznecova24-svg.github.io/gvasaliya/" target="_blank" rel="noopener">смотреть сайт</a>
-      <a class="card-link order" href="#contact">заказать такое же</a>
-    </div>
-  </div>
+                <div class="spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300">
+                    <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">hr-tracker</h3>
+                    <p class="text-serene-800 text-sm md:text-base mb-6">рекрутинг-трекер для рекрутера: кандидаты, собеседования, вакансии и увольнения в одном месте, без таблиц в экселе.</p>
+                    <a href="https://nikakuznecova24-svg.github.io/hr-tracker/" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">смотреть сайт</a>
+                </div>
 
-  <div class="card">
-    <div class="card-name">логбук никиты</div>
-    <div class="card-desc">личный логбук — фиксировать и отслеживать своё день за днём в одном месте.</div>
-    <div class="card-row">
-      <a class="card-link" href="https://nikakuznecova24-svg.github.io/nikita-logbook/" target="_blank" rel="noopener">смотреть сайт</a>
-      <a class="card-link order" href="#contact">заказать такое же</a>
-    </div>
-  </div>
+                <div class="spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300">
+                    <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">алина гвасалия · pro тело</h3>
+                    <p class="text-serene-800 text-sm md:text-base mb-6">визитка и лендинг для эксперта — представление и понятный путь к записи.</p>
+                    <a href="https://nikakuznecova24-svg.github.io/gvasaliya/" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">смотреть сайт</a>
+                </div>
 
-  <div class="section-title">что можно заказать</div>
-  <div class="section-sub" style="margin-bottom:18px;">
-    <div class="services">
-      <span class="service-chip">сайт-визитка</span>
-      <span class="service-chip">лендинг</span>
-      <span class="service-chip">личная платформа</span>
-      <span class="service-chip">трекер / дневник</span>
-      <span class="service-chip">telegram-бот и агент</span>
-    </div>
-  </div>
+                <div class="spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300">
+                    <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">логбук никиты</h3>
+                    <p class="text-serene-800 text-sm md:text-base mb-6">личный логбук — фиксировать и отслеживать своё день за днём в одном месте.</p>
+                    <a href="https://nikakuznecova24-svg.github.io/nikita-logbook/" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">смотреть сайт</a>
+                </div>
 
-  <div id="contact" class="cta-block">
-    <h2>хочешь такой же инструмент себе?</h2>
-    <p>расскажи, что нужно — обсудим и соберу похожее под твою задачу.</p>
-    <a class="btn-primary" href="https://instagram.com/nikakuznecova24" target="_blank" rel="noopener">написать в instagram</a>
-  </div>
+            </div>
 
-  <footer>ника кузнецова · вайб-кодинг</footer>
-</div>
+            <div class="mb-12">
+                <span class="text-xs font-semibold text-accent-terracotta block mb-3">что можно заказать</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">сайт-визитка</span>
+                    <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">лендинг</span>
+                    <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">личная платформа</span>
+                    <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">трекер / дневник</span>
+                    <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">telegram-бот и агент</span>
+                </div>
+            </div>
 
-<script>
-function applyTheme(t){
-  document.documentElement.setAttribute('data-theme', t);
-  document.getElementById('themeSwitch').classList.toggle('on', t==='dark');
-  try{ localStorage.setItem('theme', t); }catch(e){}
-}
-function toggleTheme(){
-  const cur = document.documentElement.getAttribute('data-theme') ||
-    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  applyTheme(cur==='dark' ? 'light' : 'dark');
-}
-(function(){
-  let saved=null;
-  try{ saved = localStorage.getItem('theme'); }catch(e){}
-  if(saved){ applyTheme(saved); }
-  else if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-    document.getElementById('themeSwitch').classList.add('on');
-  }
-})();
-</script>
+            <div class="glass-panel rounded-[3rem] p-8 md:p-12 border border-white shadow-xl text-center">
+                <h2 class="font-display text-xl sm:text-3xl font-bold text-serene-900 mb-3">хочешь такой же инструмент себе?</h2>
+                <p class="text-serene-800 text-sm md:text-base mb-6 max-w-md mx-auto">расскажи, что нужно — обсудим и соберу похожее под твою задачу</p>
+                <a href="https://nikakuznecova24-svg.github.io/vaybkoding/#audit" class="inline-flex items-center justify-center gap-3 px-10 py-4 bg-serene-900 text-white font-medium rounded-full shadow-lg hover:bg-serene-800 transition-all duration-300">
+                    обсудить проект
+                </a>
+            </div>
+
+        </div>
+    </section>
+
 </body>
 </html>
