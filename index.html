@@ -66,7 +66,7 @@
                     то, что уже живёт, работает и делает деньги другим бизнесам:
                 </h1>
                 <div class="flex flex-col sm:flex-row items-center gap-4">
-                    <a href="#audit" class="inline-flex px-4 py-2.5 sm:px-8 sm:py-4 w-auto text-xs sm:text-base bg-gradient-to-r from-accent-terracotta to-accent-sunset text-white font-medium rounded-full shadow-lg shadow-accent-terracotta/20 hover:shadow-xl hover:shadow-accent-terracotta/30 hover:scale-[1.02] active:scale-95 transition-all duration-300 text-center items-center justify-center gap-3">
+                    <a href="#audit" onclick="scrollToAudit(event)" class="inline-flex px-4 py-2.5 sm:px-8 sm:py-4 w-auto text-xs sm:text-base bg-gradient-to-r from-accent-terracotta to-accent-sunset text-white font-medium rounded-full shadow-lg shadow-accent-terracotta/20 hover:shadow-xl hover:shadow-accent-terracotta/30 hover:scale-[1.02] active:scale-95 transition-all duration-300 text-center items-center justify-center gap-3">
                         хочу обсудить проект и получить бесплатный аудит
                     </a>
                 </div>
@@ -84,41 +84,62 @@
             <div id="workGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
 
                 <div class="portfolio-item spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300" data-category="сайты">
+                    <div class="flex items-center justify-end mb-4">
+                        <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">лид-магнит внутри</span>
+                    </div>
                     <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">сайт «связаны»</h3>
                     <p class="text-serene-800 text-sm md:text-base mb-6">когда продаёшь неочевидный, эмоциональный подарок — текста на странице мало, нужно, чтобы человек прямо на сайте почувствовал, как это будет выглядеть. <strong class="text-accent-terracotta font-bold">лид-магнит и мини-конструктор разворота дают попробовать продукт до оплаты</strong> и снимают главное сомнение «а как это будет смотреться?».</p>
                     <a href="https://svyazany.ru" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">смотреть сайт</a>
                 </div>
 
                 <div class="portfolio-item spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300" data-category="сайты">
+                    <div class="flex items-center justify-end mb-4">
+                        <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">запись в один клик</span>
+                    </div>
                     <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">сайт алины гвасалии · pro тело</h3>
                     <p class="text-serene-800 text-sm md:text-base mb-6">когда устал(а) объяснять на созвонах, чем занимаешься — нужен <strong class="text-accent-terracotta font-bold">сайт, который сразу показывает уровень эксперта и ведёт к записи одним понятным действием</strong>, без лишних вопросов и кликов.</p>
                     <a href="https://nikakuznecova24-svg.github.io/gvasaliya/" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">смотреть сайт</a>
                 </div>
 
                 <div class="portfolio-item spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300" data-category="воронка">
+                    <div class="flex items-center justify-end mb-4">
+                        <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">работает 24/7</span>
+                    </div>
                     <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">бот-воронка «связаны»</h3>
                     <p class="text-serene-800 text-sm md:text-base mb-6">когда не успеваешь вручную прогревать каждого нового подписчика — нужна <strong class="text-accent-terracotta font-bold">система, которая сама, шаг за шагом, доводит человека до готовности заказать</strong>, без твоего участия в переписке, 24/7.</p>
                     <a href="https://t.me/svyazanyy_bot" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">открыть бота</a>
                 </div>
 
                 <div class="portfolio-item spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300" data-category="сервисы">
+                    <div class="flex items-center justify-end mb-4">
+                        <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">считает автоматически</span>
+                    </div>
                     <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">финансовый дневник богатой женщины</h3>
                     <p class="text-serene-800 text-sm md:text-base mb-6">когда деньги утекают незаметно и непонятно, когда закроются кредиты — нужен не эксель, а <strong class="text-accent-terracotta font-bold">простой трекер, который сам считает план на месяц и день финансовой свободы</strong> при текущем темпе выплат.</p>
                     <a href="https://nikakuznecova24-svg.github.io/nika-finance/" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">смотреть сайт</a>
                 </div>
 
                 <div class="portfolio-item spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300" data-category="сервисы">
+                    <div class="flex items-center justify-end mb-4">
+                        <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">личный трекер</span>
+                    </div>
                     <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">сервис никиты</h3>
                     <p class="text-serene-800 text-sm md:text-base mb-6">когда хочешь отслеживать свои дни и решения, но обычные заметки теряются и не складываются в картину — нужен <strong class="text-accent-terracotta font-bold">личный логбук, который фиксирует происходящее в одном месте</strong> и не даёт забыть, что было важно.</p>
                     <a href="https://nikakuznecova24-svg.github.io/nikita-logbook/" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">смотреть сайт</a>
                 </div>
 
                 <div class="portfolio-item spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300" data-category="агенты">
+                    <div class="flex items-center justify-end mb-4">
+                        <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">живой пример</span>
+                    </div>
                     <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">личный ии-агент</h3>
                     <p class="text-serene-800 text-sm md:text-base mb-6">когда задачи, напоминания и разговоры разбросаны по головам и чатам — нужен <strong class="text-accent-terracotta font-bold">агент, который держит всё в одном месте и отвечает в любой момент, 24/7</strong>, без выходных. живой пример работы такого агента, а не просто описание услуги.</p>
                 </div>
 
                 <div class="portfolio-item spotlight-card bg-gradient-to-br from-white to-accent-terracotta/[0.05] rounded-[2.5rem] p-6 md:p-8 border border-accent-terracotta/10 shadow-xl flex flex-col hover:shadow-2xl transition-all duration-300" data-category="платформы">
+                    <div class="flex items-center justify-end mb-4">
+                        <span class="px-3 py-1 bg-serene-900/[0.05] text-serene-800/70 rounded-full text-xs font-semibold">стрики и прогресс</span>
+                    </div>
                     <h3 class="font-display text-lg md:text-xl font-bold text-serene-900 mb-3">платформа «поток · 70 дней»</h3>
                     <p class="text-serene-800 text-sm md:text-base mb-6">когда крупная цель пугает масштабом и легко забросить — нужна <strong class="text-accent-terracotta font-bold">система, которая раскладывает её на спринты, недели и дни, показывает стрики и прогресс</strong>, чтобы двигаться, а не буксовать.</p>
                     <a href="https://nikakuznecova24-svg.github.io/potok/" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1.5 text-accent-terracotta font-semibold text-sm underline hover:text-accent-sunset transition-colors w-fit">смотреть сайт</a>
@@ -217,6 +238,20 @@
     </section>
 
     <script>
+        function scrollToAudit(event) {
+            if (event) event.preventDefault();
+            const target = document.getElementById('audit');
+            if (!target) return;
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const formCard = target.querySelector('.spotlight-card');
+            if (formCard) {
+                setTimeout(function(){
+                    formCard.classList.add('ring-4', 'ring-accent-terracotta/40');
+                    setTimeout(function(){ formCard.classList.remove('ring-4', 'ring-accent-terracotta/40'); }, 1200);
+                }, 400);
+            }
+        }
+
         function initTelegramLinks() {
             const btn = document.getElementById('telegramBtn');
             if (btn) btn.href = `https://t.me/${TELEGRAM_USERNAME}`;
